@@ -37,7 +37,7 @@ const handleSubmit = (e: FormEvent) => {
 };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-screen bg-[#00000070] grid-place-items-center">
+    <div className="fixed top-0 left-0 w-full h-screen bg-[#00000070] grid place-items-center">
         <div className="bg-white w-[700px] py-8 rounded-lg text-center relative">
             <IoIosCloseCircleOutline
                 className="absolute text-2xl right-0 top-0 m-4 cursor-pointer hover:text-red-600"
