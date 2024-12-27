@@ -1,9 +1,27 @@
-import Image from "next/image";
+"use client";
+import Footer from "@/components/front-end/Footer";
+import Banner from "@/components/front-end/Banner";
+import Cart from "@/components/front-end/Cart";
+import Feature from "@/components/front-end/Feature";
+import Hero from "@/components/front-end/Hero";
+import Navbar from "@/components/front-end/Navbar";
+import TrendingProducts from "@/components/front-end/TrendingProducts";
+import React, { useState } from "react";
 
-export default function Home() {
+const Home = () => {
+  const [showCart, setShowCart] = useState(false);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main>Hello</main>
-    </div>
+    <main>
+      <Navbar setShowCart={setShowCart}/>
+      {showCart && <Cart setShowCart={setShowCart}/>}
+      < Hero />
+      < Feature />
+      <TrendingProducts />
+      <Banner />
+      <Footer />
+    </main>
   );
-}
+};
+
+export default Home;
